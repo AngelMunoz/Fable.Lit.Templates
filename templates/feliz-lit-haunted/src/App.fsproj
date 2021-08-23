@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Types.fs" />
+    <Compile Include="Navbar.fs" />
+    <Compile Include="Notes.fs" />
+    <Compile Include="Home.fs" />
+    <Compile Include="App.fs" />
+    <Compile Include="Main.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Feliz.Engine.Lit" Version="1.0.0-beta-002" />
+    <PackageReference Include="Fable.Lit" Version="1.0.0-beta-001" />
+    <PackageReference Include="Fable.Haunted" Version="1.0.0-beta-004" />
+  </ItemGroup>
+
+</Project>

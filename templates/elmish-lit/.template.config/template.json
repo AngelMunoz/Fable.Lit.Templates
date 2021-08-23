@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "identity": "Elmish.Lit",
+    "shortName": "elmish-lit",
+    "name": "Elmish.Lit",
+    "author": "Angel D. Munoz",
+    "classifications": [
+        "Web",
+        "F#",
+        "fable",
+        "lit-html",
+        "fable-lit"
+    ],
+    "type": {
+        "language": "F#"
+    },
+    "tags": {
+        "type": "project",
+        "language": "F#"
+    },
+    "sourceName": "AppName",
+    "preferNameDirectory": true
+}

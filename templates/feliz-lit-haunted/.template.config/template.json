@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "identity": "Fable.Lit.Haunted",
+    "shortName": "elmish-lit",
+    "name": "Fable.Lit.Haunted",
+    "author": "Angel D. Munoz",
+    "classifications": [
+        "Web",
+        "F#",
+        "fable",
+        "lit-html",
+        "fable-lit",
+        "Feliz",
+        "Feliz-Engine",
+        "haunted"
+    ],
+    "type": {
+        "language": "F#"
+    },
+    "tags": {
+        "type": "project",
+        "language": "F#"
+    },
+    "sourceName": "AppName",
+    "preferNameDirectory": true
+}
