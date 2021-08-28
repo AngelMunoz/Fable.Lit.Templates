@@ -2,7 +2,7 @@
 module Pages.Home
 
 open Lit
-open Fable.Haunted
+open Haunted
 
 
 let private counter (props: {| initial: int option |}) =

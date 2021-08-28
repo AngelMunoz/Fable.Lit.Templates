@@ -1,6 +1,6 @@
 module Components.Navbar
 
-open Feliz.Lit
+open Lit.Feliz
 open Types
 
 

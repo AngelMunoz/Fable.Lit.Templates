@@ -1,8 +1,8 @@
 [<RequireQualifiedAccess>]
 module Pages.Home
 
-open Feliz.Lit
-open Fable.Haunted
+open Lit.Feliz
+open Haunted
 
 
 let private counter (props: {| initial: int option |}) =
@@ -24,7 +24,9 @@ let private counter (props: {| initial: int option |}) =
       Html.text "Reset"
     ]
   ]
-  |> toLit
+  |> Feliz.toLit
 
 let register () =
-  defineComponent "flit-home" (Haunted.Component counter)
+  defineComponent
+    "flit-home"
+    (Haunted.Component(counter, {| useShadowDOM = false |}))

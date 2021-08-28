@@ -1,9 +1,11 @@
 ﻿module Main
 
+Fable.Core.JsInterop.importSideEffects "./styles.css"
+
 open Elmish
-open Elmish.Lit
 
 open Lit
+open Lit.Elmish
 
 type State = { counter: int; name: string }
 

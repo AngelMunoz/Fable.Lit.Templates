@@ -1,8 +1,8 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "identity": "Fable.Haunted",
-    "shortName": "fable-haunted",
-    "name": "Fable.Haunted",
+    "identity": "Lit.Haunted",
+    "shortName": "lit-html-haunted",
+    "name": "Lit + Haunted",
     "author": "Angel D. Munoz",
     "classifications": [
         "Web",

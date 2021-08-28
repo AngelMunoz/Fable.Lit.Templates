@@ -2,7 +2,7 @@
     "$schema": "http://json.schemastore.org/template",
     "identity": "Feliz.Lit.Haunted",
     "shortName": "feliz-lit-haunted",
-    "name": "Fable.Lit.Haunted",
+    "name": "Feliz.Lit + Haunted",
     "author": "Angel D. Munoz",
     "classifications": [
         "Web",

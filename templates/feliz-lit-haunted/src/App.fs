@@ -1,8 +1,8 @@
 [<RequireQualifiedAccess>]
 module App
 
-open Feliz.Lit
-open Fable.Haunted
+open Lit.Feliz
+open Haunted
 
 open Types
 open Components
@@ -16,14 +16,16 @@ let private app () =
 
   let getPage page =
     match page with
-    | Page.Home -> Html.custom ("flit-home", [])
-    | Page.Notes -> Html.custom ("flit-notes", [])
+    | Page.Home -> Feliz.lit_html $"<flit-home></flit-home>"
+    | Page.Notes -> Feliz.lit_html $"<flit-notes></flit-notes>"
 
   Html.article [
     Navbar.View onBackRequested goToPage
     Html.main [ getPage page ]
   ]
-  |> toLit
+  |> Feliz.toLit
 
 let register () =
-  defineComponent "flit-app" (Haunted.Component app)
+  defineComponent
+    "flit-app"
+    (Haunted.Component(app, {| useShadowDOM = false |}))

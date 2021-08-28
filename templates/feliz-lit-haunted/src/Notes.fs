@@ -2,10 +2,8 @@
 module Pages.Notes
 
 open Browser.Types
-open Feliz.Lit
-open Fable.Haunted
-
-
+open Lit.Feliz
+open Haunted
 
 type private Note =
   { Id: int
@@ -56,18 +54,14 @@ let private update state msg =
 
     { state with CurrentNote = current }
 
-
-
-
-let private noteTemplate note = Html.li $"{note.Id} - {note.Title}"
+let private noteTemplate (note: Note) (index: int) =
+  Html.li $"{note.Id} - {note.Title}" |> Feliz.toLit
 
 
 let private view () =
 
   let (state, dispatch) =
     Haunted.useReducer (update, { CurrentNote = None; Notes = [] })
-
-  let notes = state.Notes |> List.map noteTemplate
 
   Html.div [
     Html.form [
@@ -83,12 +77,20 @@ let private view () =
           (fun evt ->
             SetTitle (evt.target :?> HTMLInputElement).value
             |> dispatch)
+        Ev.onBlur
+          (fun evt ->
+            SetTitle (evt.target :?> HTMLInputElement).value
+            |> dispatch)
       ]
       Html.input [
         Attr.typeText
         Attr.name "body"
         Attr.placeholder "Body"
         Ev.onKeyUp
+          (fun evt ->
+            SetBody (evt.target :?> HTMLInputElement).value
+            |> dispatch)
+        Ev.onBlur
           (fun evt ->
             SetBody (evt.target :?> HTMLInputElement).value
             |> dispatch)
@@ -99,11 +101,18 @@ let private view () =
       ]
     ]
     Html.ul [
-      for note in state.Notes do
-        noteTemplate note
+      Lit.LitHtml.repeat (
+        state.Notes,
+        (fun (note: Note) -> $"{note.Id}"),
+        noteTemplate
+      )
+      :?> Lit.TemplateResult
+      |> Feliz.ofLit
     ]
   ]
-  |> toLit
+  |> Feliz.toLit
 
 let register () =
-  defineComponent "flit-notes" (Haunted.Component view)
+  defineComponent
+    "flit-notes"
+    (Haunted.Component(view, {| useShadowDOM = false |}))

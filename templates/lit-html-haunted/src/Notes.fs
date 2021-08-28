@@ -3,7 +3,7 @@ module Pages.Notes
 
 open Browser.Types
 open Lit
-open Fable.Haunted
+open Haunted
 
 
 

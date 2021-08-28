@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "dotnet tool restore",
     "start": "dotnet fable src --watch --run snowpack dev",
     "build": "dotnet fable snowpack build"
   },
@@ -11,10 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit-html": "^1.4.1",
+    "lit-html": "2.0.0-rc.4",
     "haunted": "4.8.2"
   },
   "devDependencies": {
-    "snowpack": "^3.8.6"
+    "snowpack": "3.8.6"
   }
 }

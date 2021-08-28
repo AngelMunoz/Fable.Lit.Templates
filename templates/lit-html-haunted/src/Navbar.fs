@@ -3,7 +3,7 @@ module Components.Navbar
 open Browser.Types
 open Fable.Core
 open Lit
-open Fable.Haunted
+open Haunted
 open Types
 
 
