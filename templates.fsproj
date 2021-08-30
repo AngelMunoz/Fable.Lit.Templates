@@ -16,7 +16,7 @@
     <!-- NuGet config -->
     <PackageType>Template</PackageType>
     <PackageId>Fable.Lit.Templates</PackageId>
-    <PackageVersion>1.0.0-rc-001</PackageVersion>
+    <PackageVersion>1.0.0-rc-002</PackageVersion>
     <PackageTags>templates;fable;lit;lit-html;F#</PackageTags>
     <PackageProjectUrl>https://github.com/AngelMunoz/Fable.Lit.Templates</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
