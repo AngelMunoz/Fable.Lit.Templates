@@ -18,7 +18,6 @@
     <PackageReference Include="Fable.Lit.Feliz" Version="1.0.0-beta-003" />
     <PackageReference Include="Fable.Haunted" Version="1.0.0-beta-007" />
     <PackageReference Include="Fable.Lit" Version="1.0.0-beta-002" />
-    <PackageReference Include="Fable.Core" Version="3.3.0-beta-001" />
   </ItemGroup>
 
 </Project>
