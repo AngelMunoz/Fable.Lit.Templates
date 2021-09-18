@@ -2,20 +2,16 @@
   "name": "AppName",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "postinstall": "dotnet tool restore",
-    "start": "dotnet fable src --watch --run snowpack dev",
-    "build": "dotnet fable snowpack build"
+    "format": "dotnet fantomas . --recurse",
+    "start": "dotnet fable src -s --watch --run vite",
+    "build": "dotnet fable src --run vite build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "lit-html": "2.0.0-rc.4",
-    "haunted": "4.8.2"
+    "lit-html": "2.0.0-rc.4"
   },
   "devDependencies": {
-    "snowpack": "3.8.6"
+    "vite": "^2.5.8"
   }
 }
