@@ -1,4 +1,0 @@
-[*.fs]
-indent_size=2
-max_line_length=80
-fsharp_single_argument_web_mode=true
