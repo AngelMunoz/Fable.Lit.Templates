@@ -5,17 +5,20 @@ open Lit
 open Haunted
 
 
-let private counter (props: {| initial: int option |}) =
-    let count, setCount =
-        Haunted.useState (props.initial |> Option.defaultValue 0)
-
-    html
-        $"""
-        <p>Home: {count}</p>
-        <button @click={fun _ -> setCount (count + 1)}>Increment</button>
-        <button @click={fun _ -> setCount (count - 1)}>Decrement</button>
-        <button @click={fun _ -> setCount (0)}>Reset</button>
+let private home (props: {| initial: int option |}) =
+  html
+    $"""
+        <article>
+          <section>
+            <h1>Counter at 0</h1>
+            <flit-counter></flit-counter>
+          </section>
+          <section>
+            <h1>Counter at 100</h1>
+            <flit-counter .initial={100}></flit-counter>
+          </section>
+        </article>
         """
 
 let register () =
-    defineComponent "flit-home" (Haunted.Component counter)
+  defineComponent "flit-home" (Haunted.Component home)

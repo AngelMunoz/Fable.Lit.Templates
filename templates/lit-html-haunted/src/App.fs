@@ -6,6 +6,7 @@ open Haunted
 
 open Types
 open Components
+open Browser.Types
 
 let private app () =
   // use Haunted for component based functions
@@ -14,7 +15,11 @@ let private app () =
 
   let onBackRequested _ = printfn "Back requested"
 
-  let goToPage page _ = setPage page
+  let goToPage (evt: CustomEvent<Page>) =
+    let page =
+      evt.detail |> Option.defaultValue Page.Home
+
+    setPage page
 
   let getPage page =
     match page with
@@ -24,7 +29,9 @@ let private app () =
   html
     $"""
         <article>
-            {Navbar.View onBackRequested goToPage}
+            <flit-navbar
+              @go-to-page={goToPage}
+              @go-back={onBackRequested}></flit-navbar>
             <main>{getPage page}</main>
         </article>
         """

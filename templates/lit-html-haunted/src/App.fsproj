@@ -7,7 +7,8 @@
 
   <ItemGroup>
     <Compile Include="Types.fs" />
-    <Compile Include="Navbar.fs" />
+    <Compile Include="Components/Navbar.fs" />
+    <Compile Include="Components/Counter.fs" />
     <Compile Include="Notes.fs" />
     <Compile Include="Home.fs" />
     <Compile Include="App.fs" />
