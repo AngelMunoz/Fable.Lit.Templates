@@ -1,27 +1,21 @@
 lockfileVersion: 5.3
 
 specifiers:
-  haunted: 4.8.2
   lit: 2.0.0
   lit-html: 2.0.0
   vite: ^2.5.8
 
 dependencies:
-  haunted: 4.8.2
   lit: 2.0.0
   lit-html: 2.0.0
 
 devDependencies:
-  vite: 2.5.8
+  vite: 2.5.10
 
 packages:
 
   /@lit/reactive-element/1.0.0:
     resolution: {integrity: sha512-Kpgenb8UNFsKCsFhggiVvUkCbcFQSd6N8hffYEEGjz27/4rw3cTSsmP9t3q1EHOAsdum60Wo64HvuZDFpEwexA==}
-    dev: false
-
-  /@lit/reactive-element/1.0.0-rc.3:
-    resolution: {integrity: sha512-Rs2px1keOQUNJUo5B+WExl5v244ZNCiN/iMVNO9evFdJjAdWCIupR/p14zRPkNHsciRBELLTcOZ379cI9O6PDg==}
     dev: false
 
   /@types/trusted-types/2.0.2:
@@ -32,8 +26,8 @@ packages:
     resolution: {integrity: sha512-ecORCqbSFP7Wm8Y6lyqMJjexBQqXSF7SSeaTyGGphogUjBlFP9m9o08wy86HL2uB7fMTxtOUzLMk7ogKcxMg1w==}
     dev: true
 
-  /esbuild/0.12.28:
-    resolution: {integrity: sha512-pZ0FrWZXlvQOATlp14lRSk1N9GkeJ3vLIwOcUoo3ICQn9WNR4rWoNi81pbn6sC1iYUy7QPqNzI3+AEzokwyVcA==}
+  /esbuild/0.12.29:
+    resolution: {integrity: sha512-w/XuoBCSwepyiZtIRsKsetiLDUVGPVw1E/R3VTFSecIy8UR7Cq3SOtwKHJMFoVqqVG36aGkzh4e8BvpO1Fdc7g==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -57,13 +51,6 @@ packages:
       function-bind: 1.1.1
     dev: true
 
-  /haunted/4.8.2:
-    resolution: {integrity: sha512-+auNzzp1AjzZblPrY3oV8PuTGAcK6I9ExBfFnhR+6HINVFeM7BR+jPDAKxa7NF22RBbu5McBhbp+t0zO0rqrqQ==}
-    dependencies:
-      '@lit/reactive-element': 1.0.0-rc.3
-      lit-html: 1.4.1
-    dev: false
-
   /is-core-module/2.6.0:
     resolution: {integrity: sha512-wShG8vs60jKfPWpF2KZRaAtvt3a20OAn7+IJ6hLPECpSABLcKtFKTTI4ZtH5QcBruBHlq+WsdHWyz0BCZW7svQ==}
     dependencies:
@@ -75,10 +62,6 @@ packages:
     dependencies:
       '@lit/reactive-element': 1.0.0
       lit-html: 2.0.0
-    dev: false
-
-  /lit-html/1.4.1:
-    resolution: {integrity: sha512-B9btcSgPYb1q4oSOb/PrOT6Z/H+r6xuNzfH4lFli/AWhYwdtrgQkQWBbIc6mdnf6E2IL3gDXdkkqNktpU0OZQA==}
     dev: false
 
   /lit-html/2.0.0:
@@ -121,8 +104,8 @@ packages:
       path-parse: 1.0.7
     dev: true
 
-  /rollup/2.56.3:
-    resolution: {integrity: sha512-Au92NuznFklgQCUcV96iXlxUbHuB1vQMaH76DHl5M11TotjOHwqk9CwcrT78+Tnv4FN9uTBxq6p4EJoYkpyekg==}
+  /rollup/2.57.0:
+    resolution: {integrity: sha512-bKQIh1rWKofRee6mv8SrF2HdP6pea5QkwBZSMImJysFj39gQuiV8MEPBjXOCpzk3wSYp63M2v2wkWBmFC8O/rg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -134,15 +117,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /vite/2.5.8:
-    resolution: {integrity: sha512-2GRsLrmMsFI0u31WTtkGbKvEIJO4I9qDltma3QiyDJEk14IzjM35OCElAFHFs2VlL7h2qX5AdHbwfEhnmwhQgw==}
+  /vite/2.5.10:
+    resolution: {integrity: sha512-0ObiHTi5AHyXdJcvZ67HMsDgVpjT5RehvVKv6+Q0jFZ7zDI28PF5zK9mYz2avxdA+4iJMdwCz6wnGNnn4WX5Gg==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     dependencies:
-      esbuild: 0.12.28
+      esbuild: 0.12.29
       postcss: 8.3.6
       resolve: 1.20.0
-      rollup: 2.56.3
+      rollup: 2.57.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

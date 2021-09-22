@@ -5,13 +5,12 @@
   "scripts": {
     "postinstall": "dotnet tool restore",
     "format": "dotnet fantomas . --recurse",
-    "start": "dotnet fable src -s --watch --run vite",
+    "start": "dotnet fable src -s --watch --run vite serve",
     "build": "dotnet fable --run vite build"
   },
   "dependencies": {
     "lit": "2.0.0",
-    "lit-html": "2.0.0",
-    "haunted": "4.8.2"
+    "lit-html": "2.0.0"
   },
   "devDependencies": {
     "vite": "^2.5.8"

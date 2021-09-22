@@ -9,7 +9,8 @@
     "build": "dotnet fable src --run vite build"
   },
   "dependencies": {
-    "lit-html": "2.0.0-rc.4"
+    "lit": "2.0.0",
+    "lit-html": "2.0.0"
   },
   "devDependencies": {
     "vite": "^2.5.8"
