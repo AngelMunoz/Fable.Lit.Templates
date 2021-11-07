@@ -4,6 +4,7 @@ open Browser.Types
 
 open Elmish
 open Lit
+open Lit.Elmish
 
 type private Note =
   { Id: int
@@ -29,22 +30,19 @@ let private update msg state =
   match msg with
   | Save ->
     match state.CurrentNote
-          |> Option.map
-               (fun note ->
-                 { note with
-                     Id = (state.Notes |> Seq.length) + 1 }) with
+          |> Option.map (fun note ->
+            { note with Id = (state.Notes |> Seq.length) + 1 })
+      with
     | Some note ->
       { state with
           Notes =
-            { note with
-                Id = state.Notes.Length + 1 }
+            { note with Id = state.Notes.Length + 1 }
             :: state.Notes },
       Cmd.none
     | None -> state, Cmd.none
 
   | Remove note ->
-    { state with
-        Notes = state.Notes |> List.filter (fun n -> n <> note) },
+    { state with Notes = state.Notes |> List.filter (fun n -> n <> note) },
     Cmd.none
   | SetTitle title ->
     let current =

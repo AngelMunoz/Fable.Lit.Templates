@@ -8,7 +8,7 @@ open Types
 [<LitElement("flit-navbar")>]
 let private NavBar () =
 
-  LitElement.init ()
+  LitElement.init () |> ignore
 
   let goback (ev: Event) =
     let evt =
